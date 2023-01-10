@@ -9,7 +9,7 @@ class Company < ActiveRecord::Base
 
   def self.oldest_company
   #returns the Company instance with the earliest founding year
-  self.order(founding_year: :asc)[0]
+  self.order(:founding_year).first
   end
 
 end
